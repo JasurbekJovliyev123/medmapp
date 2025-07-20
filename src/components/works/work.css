@@ -1,0 +1,227 @@
+:root {
+    --color-primary-blue: #007BFF;
+    --color-primary-green: #20c997; /* Tibbiyotga mosroq yashil */
+    --color-light-blue: #e0f2fe; /* blue-100 */
+    --color-light-green: #e6f7f2; /* Yengil yashil */
+    --color-dark-text: #212529; /* Juda to'q kulrang */
+    --color-medium-text: #495057; /* O'rta kulrang */
+    --color-light-bg: #f8f9fa; /* Oq-kulrang */
+    --color-card-bg: #ffffff;
+    --color-border: #dee2e6;
+    --color-shadow-light: rgba(0, 0, 0, 0.05);
+    --color-shadow-medium: rgba(0, 0, 0, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.15);
+
+    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
+}
+.how-we-work-section {
+    padding: 5rem 1rem;
+    background-color: #f8f9fa;
+}
+
+.how-we-work-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 72rem;
+    margin: 3.5rem auto 0;
+    align-items: center;
+}
+
+/* Timeline asosiy konteyneri */
+.timeline {
+    position: relative;
+    /* Vertikal chiziq uchun chapdan joy qoldiramiz */
+}
+
+/* Vertikal chiziq */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px; /* Nuqta markaziga to'g'rilash (50px / 2 - 1px) */
+    width: 2px;
+    background-color: #e2e8f0; /* Chiziqning foni */
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 74px; /* Nuqta va oraliq uchun joy (50px + 24px) */
+    margin-bottom: 0;
+    min-height: 120px; /* Qadamlar orasida yetarli joy qoldirish */
+}
+.timeline-item:last-child {
+    min-height: auto;
+}
+
+/* Qadam raqami uchun doira (marker) */
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary-blue);
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    color: #ffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    z-index: 2; /* Chiziqdan ustun turishi uchun */
+}
+
+/* Qadam kartasi */
+.timeline-card {
+    background-color: transparent;
+    border-radius: 1rem;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-card {
+    transform: translateX(5px);
+}
+
+.card-icon {
+    flex-shrink: 0;
+    background-color: #e0f2fe;
+    color: var(--color-primary-blue);
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.timeline-item:hover .card-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.card-text h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    margin: 0 0 0.25rem 0;
+}
+
+.card-text p {
+    font-size: 0.95rem;
+    color: var(--color-medium-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Scroll'dagi aktiv holat uchun uslublar */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+.timeline-item.active .timeline-marker {
+    border-color: var(--color-primary-blue);
+    background-color: var(--color-primary-blue);
+    color: #ffffff;
+    animation: pulse 1.5s infinite;
+}
+.timeline-marker:hover{
+  border-color: var(--color-primary-blue);
+    background-color: var(--color-primary-blue);
+    color: #ffffff;
+    animation: pulse 1.5s infinite;
+}
+
+/* O'ng taraf: Video Prevyusi */
+.work-video-container {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.work-video-container:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px -5px rgba(0, 123, 255, 0.15);
+}
+
+.video-thumbnail {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px; /* Ikonkani vizual markazlash */
+    color: var(--color-primary-blue);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.work-video-container:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #ffffff;
+}
+
+.play-button svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Boshlash tugmasi */
+.get-started-button {
+    background-color: var(--color-primary-blue);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.get-started-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* Katta ekranlar uchun moslashuv */
+@media (min-width: 992px) {
+    .how-we-work-content {
+        grid-template-columns: 1fr 1fr; /* Yonma-yon joylashish */
+    }
+}

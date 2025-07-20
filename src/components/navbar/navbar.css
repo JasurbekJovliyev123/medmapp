@@ -1,0 +1,212 @@
+/* CSS o'zgaruvchilari (ranglar uchun) */
+:root {
+    --color-primary-blue: #007BFF;
+    --color-primary-green: #20c997; /* Tibbiyotga mosroq yashil */
+    --color-light-blue: #e0f2fe; /* blue-100 */
+    --color-light-green: #e6f7f2; /* Yengil yashil */
+    --color-dark-text: #212529; /* Juda to'q kulrang */
+    --color-medium-text: #495057; /* O'rta kulrang */
+    --color-light-bg: #f8f9fa; /* Oq-kulrang */
+    --color-card-bg: #ffffff;
+    --color-border: #dee2e6;
+    --color-shadow-light: rgba(0, 0, 0, 0.05);
+    --color-shadow-medium: rgba(0, 0, 0, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.15);
+
+    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
+}
+
+/* Umumiy uslublar va reset */
+
+
+/* Header uslublari */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);   
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);  
+    padding: 5px 1.5rem;
+    height: var(--header-height); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Scroll qilinganda header o'zgarishi */
+.header.scrolled {
+    height: var(--header-height-scrolled);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.header-logo img {
+    height: 4.5rem; /* Boshlang'ich logo o'lchami */
+    transition: height 0.3s ease-in-out;
+}
+
+.header.scrolled .header-logo img {
+    height: 3.5rem; /* Kichraygan logo o'lchami */
+}
+
+/* Navigatsiya (Mobil uchun yashirin) */
+.header-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Dastlab ekrandan tashqarida */
+    width: 280px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.1);    
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 2rem;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Silliq ochilish effekti */
+}
+
+.header-nav.active {
+    right: 0; /* JavaScript orqali "active" class qo'shilganda ko'rinadi */
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--color-dark-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+    color: var(--color-primary-blue);
+}
+
+/* Ikonkalar guruhi */
+.header-actions {
+    display: none; /* Mobilda yashirin */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-icon {
+    color: var(--color-medium-text);
+    cursor: pointer;
+    width: 1.35rem;
+    height: 1.35rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.header-icon:hover {
+    color: var(--color-primary-blue);
+    transform: scale(1.1);
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    color: var(--color-medium-text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.language-selector:hover {
+    background-color: var(--color-light-bg);
+}
+
+.language-selector svg {
+    width: 1rem;
+    height: 1rem;
+}
+.language-selector span {
+    margin: 0 0.3rem;
+}
+.language-selector .chevron-down {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Gamburger Menyusi */
+.hamburger-menu {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001; /* Navigatsiyadan yuqorida turishi uchun */
+    color: var(--color-dark-text);
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 1rem 2.5rem;
+    }
+
+    /* Gamburger menyuni yashirish */
+    .hamburger-menu {
+        display: none;
+    }
+    
+    /* Navigatsiyani to'g'rilash */
+    .header-nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        flex-direction: row;
+        margin: 0 auto; /* Markazga joylash */
+    }
+
+    .header-nav ul {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .header-nav a {
+        font-size: 0.95rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    
+    /* Hover effekti uchun chiziqcha */
+    .header-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-primary-blue);
+        transition: width 0.3s ease;
+    }
+
+    .header-nav a:hover::after {
+        width: 100%;
+    }
+
+    /* Ikonka guruhini ko'rsatish */
+    .header-actions {
+        display: flex;
+    }
+}

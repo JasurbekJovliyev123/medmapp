@@ -1,0 +1,442 @@
+:root {
+    --color-primary-blue: #007BFF;
+    --color-primary-green: #20c997; /* Tibbiyotga mosroq yashil */
+    --color-light-blue: #e0f2fe; /* blue-100 */
+    --color-light-green: #e6f7f2; /* Yengil yashil */
+    --color-dark-text: #212529; /* Juda to'q kulrang */
+    --color-medium-text: #495057; /* O'rta kulrang */
+    --color-light-bg: #f8f9fa; /* Oq-kulrang */
+    --color-card-bg: #ffffff;
+    --color-border: #dee2e6;
+    --color-shadow-light: rgba(0, 0, 0, 0.05);
+    --color-shadow-medium: rgba(0, 0, 0, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.15);
+
+    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
+}
+/* Hero Section uslublari */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #000; /* Video yuklanmaganda qora fon */
+    color: #ffffff;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 50, 100, 0.6), rgba(0, 100, 150, 0.8)); /* To'qroq ko'k gradient */
+    z-index: 10;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 72px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-shadow: 0 5px 10px var(--color-shadow-medium);
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Asosiy qidiruv paneli uslublari */
+.main-search-bar {
+    width: 100%;
+    max-width: 40rem;
+    margin-bottom: 3rem;
+}
+
+.main-search-bar .search-input-wrapper {
+    position: relative;
+}
+
+.main-search-bar input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    border-radius: 9999px;
+    color: var(--color-dark-text);
+    font-size: 1.125rem;
+    box-shadow: 0 4px 15px var(--color-shadow-medium);
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-search-bar input:focus {
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3); /* Ko'k fokus halqasi */
+}
+
+.main-search-bar .search-icon-inside {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Forma kartasi uslublari */
+.form-card {
+    width: 100%;
+    max-width: 64rem;
+    background-color: var(--color-card-bg);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px var(--color-shadow-strong);
+    display: grid;
+    grid-template-columns: repeat(4,1fr );
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+@media (min-width: 640px) { /* sm breakpoint */
+    .specialty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .specialty-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+@media ( max-width:640px ){
+    .form-card{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.form-group label {
+    color: var(--color-dark-text);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-dark-text);
+    background-color: var(--color-light-bg);
+    appearance: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: var(--color-primary-blue);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.form-group .select-wrapper {
+    position: relative;
+}
+
+.form-group .select-wrapper select {
+    padding-right: 2.5rem;
+}
+
+.form-group .select-wrapper .chevron-down-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-medium-text);
+    pointer-events: none;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.form-group .phone-input-wrapper {
+    position: relative;
+}
+
+.form-group .phone-input-wrapper input {
+    padding-left: 3rem;
+}
+
+.form-group .phone-input-wrapper .phone-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.chat-button {
+    background-color: var(--color-primary-green);
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(32, 201, 151, 0.3); /* Yashil soya */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    transform: scale(1);
+}
+
+.chat-button:hover {
+    background-color: #1aa67b; /* To'qroq yashil */
+    transform: scale(1.03); /* Yengil kattalashish */
+    box-shadow: 0 6px 15px rgba(32, 201, 151, 0.4);
+}
+
+.chat-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.5); /* Yashil fokus halqasi */
+}
+
+.chat-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Umumiy bo'lim sarlavhalari */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-dark-text);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Nima uchun bizni tanlaysiz? */
+.why-choose-us-section {
+    padding: 4rem 1rem;
+    background-color: var(--color-light-bg);
+}
+
+.why-choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.why-choose-us-card {
+    background-color: var(--color-card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px var(--color-shadow-light);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-us-card:hover {
+    transform: translateY(-0.75rem); /* Ko'proq ko'tarilish */
+    box-shadow: 0 10px 30px var(--color-shadow-medium);
+}
+
+.why-choose-us-card svg {
+    width: 4rem;
+    height: 4rem;
+    color: var(--color-primary-blue);
+    background-color: var(--color-light-blue);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    margin: 0 auto 1.5rem;
+    stroke-width: 1.5;
+    transition: transform 0.3s ease; /* Ikona animatsiyasi */
+}
+
+.why-choose-us-card:hover svg {
+    transform: rotateY(15deg) scale(1.05); /* Hoverda yengil aylanish */
+}
+
+.why-choose-us-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    margin-bottom: 0.75rem;
+}
+
+.why-choose-us-card p {
+    font-size: 0.9375rem;
+    color: var(--color-medium-text);
+    line-height: 1.5;
+}
+
+/* Eng Mashhur Davolash Yo'nalishlari */
+.most-popular-destinations-section {
+    padding: 4rem 1rem;
+    background-color: var(--color-card-bg);
+}
+
+.section-header-with-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 72rem;
+    margin: 0 auto 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.section-header-with-nav .section-title {
+    margin-bottom: 0;
+    text-align: left; /* Sarlavhani chapga surish */
+}
+
+.section-header-with-nav .nav-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.section-header-with-nav .nav-button {
+    background-color: var(--color-light-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.section-header-with-nav .nav-button:hover {
+    background-color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+}
+
+.section-header-with-nav .nav-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-medium-text);
+    transition: color 0.2s ease;
+}
+
+.section-header-with-nav .nav-button:hover svg {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        /* Kontentni yuqoriroqqa surish va vertikal bo'shliqni kamaytirish */
+        padding-top: 5rem; /* Header balandligini hisobga olgan holda */
+        padding-bottom: 3rem;
+        min-height: 90vh; /* Ekran balandligiga moslashish */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Kontentni vertikal markazga keltirish */
+    }
+
+    .hero-content {
+        padding: 0 1rem; /* Yonlardan ozroq bo'sh joy */
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        /* Shrift o'lchamini mobil uchun moslashtirish */
+        font-size: clamp(2rem, 8vw, 2.5rem); /* Ekran o'lchamiga qarab moslashuvchan shrift */
+        margin-bottom: 0.75rem; /* Sarlavha va matn orasidagi masofa */
+    }
+
+    .hero-content p {
+        /* Shrift o'lchamini mobil uchun moslashtirish */
+        font-size: 1rem;
+        max-width: 90%; /* Matn qatorini o'qish uchun qulayroq qilish */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .main-search-bar {
+        /* Qidiruv paneli va forma kartasi orasidagi masofani kamaytirish */
+        margin-bottom: 2rem;
+    }
+    
+    .main-search-bar input {
+        /* Kichikroq ekranlar uchun shrift va paddingni optimallashtirish */
+        width: 80%;
+        font-size: 1rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .form-card {
+        /* Ichki bo'shliqlarni kamaytirish */
+        padding: 1.5rem;
+        gap: 1.25rem; /* Elementlar orasidagi masofani kamaytirish */
+        background-color: var(--color-card-bg); /* Mobil versiyada fonni aniq ko'rsatish */
+        border-radius: 1rem; /* Chegaralarni yumshoqlashtirish */
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem; /* Yorliq va input orasidagi masofa */
+    }
+    
+    .form-group select,
+    .form-group input {
+        /* Formalarni o'lchamini kichraytirish */
+        padding: 0.625rem 1rem; 
+        font-size: 0.9rem;
+    }
+    
+    .form-group .select-wrapper select {
+        padding-right: 2rem; /* Ikonka uchun joy */
+    }
+
+    .form-group .phone-input-wrapper input {
+        padding-left: 2.5rem; /* Ikonka uchun joy */
+    }
+
+    .chat-button {
+        /* Tugmani sezilarli va bosishga qulay qilish */
+        width: 100%; /* To'liq kenglik */
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+    }
+}

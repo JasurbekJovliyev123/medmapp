@@ -1,0 +1,104 @@
+/* CSS o'zgaruvchilari (ranglar uchun) */
+:root {
+    --color-primary-blue: #007BFF;
+    --color-primary-green: #20c997; /* Tibbiyotga mosroq yashil */
+    --color-light-blue: #e0f2fe; /* blue-100 */
+    --color-light-green: #e6f7f2; /* Yengil yashil */
+    --color-dark-text: #212529; /* Juda to'q kulrang */
+    --color-medium-text: #495057; /* O'rta kulrang */
+    --color-light-bg: #f8f9fa; /* Oq-kulrang */
+    --color-card-bg: #ffffff;
+    --color-border: #dee2e6;
+    --color-shadow-light: rgba(0, 0, 0, 0.05);
+    --color-shadow-medium: rgba(0, 0, 0, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.15);
+
+    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
+}
+/* Mashhur Klinikalar */
+.popular-hospitals-section {
+    padding: 4rem 1rem;
+    background-color: var(--color-card-bg);
+}
+
+/* Sarlavha va "Hammasini ko'rish" havolasi uchun konteyner */
+.popular-hospitals-section .section-header-with-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 72rem;
+    margin: 0 auto 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.popular-hospitals-section .section-header-with-nav .section-title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.popular-hospitals-section .view-all-link {
+    font-weight: 600;
+    color: var(--color-primary-blue);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.popular-hospitals-section .view-all-link:hover {
+    background-color: var(--color-light-blue);
+}
+
+/* Karusel va navigatsiya tugmalarini o'z ichiga oluvchi yangi konteyner */
+.hospital-carousel-container {
+    position: relative;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+/* Navigatsiya tugmalari konteynerga nisbatan joylashadi */
+.hospital-carousel-container .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px var(--color-shadow-medium);
+}
+
+.hospital-carousel-container .nav-button:hover {
+    background-color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.hospital-carousel-container .nav-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-dark-text);
+    transition: color 0.2s ease;
+}
+
+.hospital-carousel-container .nav-button:hover svg {
+    color: #ffffff;
+}
+
+/* Oldingi va keyingi tugmalarning pozitsiyasi */
+.hospital-carousel-container #prevHospital {
+    left: -1.5rem; /* Konteyner chetidan tashqarida */
+}
+
+.hospital-carousel-container #nextHospital {
+    right: -1.5rem; /* Konteyner chetidan tashqarida */
+}

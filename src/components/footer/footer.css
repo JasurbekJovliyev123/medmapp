@@ -1,0 +1,193 @@
+:root {
+    --color-primary-blue: #007BFF;
+    --color-primary-green: #20c997; /* Tibbiyotga mosroq yashil */
+    --color-light-blue: #e0f2fe; /* blue-100 */
+    --color-light-green: #e6f7f2; /* Yengil yashil */
+    --color-dark-text: #212529; /* Juda to'q kulrang */
+    --color-medium-text: #495057; /* O'rta kulrang */
+    --color-light-bg: #f8f9fa; /* Oq-kulrang */
+    --color-card-bg: #ffffff;
+    --color-border: #dee2e6;
+    --color-shadow-light: rgba(0, 0, 0, 0.05);
+    --color-shadow-medium: rgba(0, 0, 0, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.15);
+
+    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
+}
+.site-footer {
+    background-color: #111827; /* To'q kulrang-ko'k fon */
+    color: #9ca3af; /* Yengil kulrang matn */
+    padding: 4rem 1rem 1.5rem 1rem;
+}
+
+/* Statistika qismi (eski footerda bor edi) */
+.site-footer .footer-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.site-footer .footer-stat-item {
+    text-align: center;
+}
+
+.site-footer .footer-stat-item .number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.site-footer .footer-stat-item .label {
+    font-size: 1rem;
+    color: #d1d5db; /* Och kulrang matn */
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background-color: #374151; /* Bo'luvchi chiziq rangi */
+    margin: 0 auto 3rem auto;
+    max-width: 72rem;
+}
+
+/* Asosiy grid */
+.footer-main-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.footer-column .footer-logo {
+    height: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-about-text {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #9ca3af;
+    background-color: #374151;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    background-color: var(--color-primary-blue);
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links, .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-links a, .footer-contact span {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.footer-contact svg {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-primary-blue);
+    margin-top: 2px;
+}
+
+/* Footer'ning eng pastki qismi */
+.footer-bottom {
+    max-width: 72rem;
+    margin: 3rem auto 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #374151;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal-links a {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Footer uchun moslashuvchanlik (Responsiveness) */
+@media (min-width: 640px) {
+    .site-footer .footer-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-main-grid {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr; /* Ustunlar kengligini sozlash */
+    }
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

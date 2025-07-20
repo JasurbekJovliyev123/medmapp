@@ -1,0 +1,87 @@
+/* @import "tailwindcss"; */
+.multi-specialty-section {
+    padding: 4rem 1rem;
+    background-color: var(--color-light-bg);
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-medium-text);
+    text-align: center;
+    max-width: 48rem; /* 768px */
+    margin: -1.5rem auto 2.5rem auto;
+    line-height: 1.6;
+}
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    max-width: 72rem; /* 1152px */
+    margin: 0 auto;
+}
+
+.specialty-card {
+    background-color: var(--color-card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px var(--color-shadow-light);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.specialty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px var(--color-shadow-medium);
+    border-color: var(--color-light-blue);
+}
+
+.specialty-card .icon-wrapper {
+    flex-shrink: 0;
+    background-color: var(--color-light-blue);
+    color: var(--color-primary-blue);
+    width: 4rem; /* 64px */
+    height: 4rem; /* 64px */
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.specialty-card .icon-wrapper svg {
+    width: 2.25rem; /* 36px */
+    height: 2.25rem; /* 36px */
+}
+
+.specialty-card .text-content h3 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+    color: var(--color-dark-text);
+    margin: 0 0 0.25rem 0;
+}
+
+.specialty-card .text-content p {
+    font-size: 0.875rem; /* 14px */
+    color: var(--color-medium-text);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ======================================== */
+/* Responsive qoidalarga qo'shimcha */
+/* ======================================== */
+@media (min-width: 640px) { /* sm breakpoint */
+    .specialty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .specialty-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

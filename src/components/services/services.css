@@ -1,0 +1,267 @@
+.our-services-section {
+    padding: 5rem 1rem;
+    background: linear-gradient(160deg, #00509e 0%, #0d324d 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Orqa fondagi dekorativ elementlar */
+.our-services-section::before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.our-services-section::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Sarlavha ranglarini o'zgartirish */
+.our-services-section .section-title {
+    color: #ffffff;
+}
+
+.our-services-section .section-subtitle {
+    color: #e0f2fe;
+}
+
+.services-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/* Xizmat kartalariga "Glassmorphism" effektini qo'llash */
+.service-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1.25rem;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Ikona va matn ranglarini o'zgartirish */
+.service-icon {
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.service-icon svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: #ffffff; /* Ikona rangini oq qilish */
+}
+
+.service-card h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff; /* Sarlavha rangini oq qilish */
+    margin: 0 0 0.5rem 0;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #e0f2fe; /* Matn rangini och ko'k qilish */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Pastki qismdagi izoh matni rangini o'zgartirish */
+.services-note {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #e0f2fe; /* Matn rangini och ko'k qilish */
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Kichik ekranlarda tugmalarni ichkariga olib kirish */
+@media (max-width: 800px) {
+    .hospital-carousel-container #prevHospital {
+        left: 0.5rem;
+    }
+    .hospital-carousel-container #nextHospital {
+        right: 0.5rem;
+    }
+}
+
+/* ========================================= */
+/* === Xizmatlar bo'limi footer uslublari === */
+/* ========================================= */
+.services-footer {
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.chat-button-services {
+    background-color: var(--color-primary-green);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 0.875rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(32, 201, 151, 0.3);
+}
+
+.chat-button-services:hover {
+    background-color: #1aa67b;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 7px 20px rgba(32, 201, 151, 0.4);
+}
+
+.services-note {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #e0f2fe; /* Matn rangini och ko'k qilish */
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Skroll qilinadigan qism */
+.hospital-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 1rem; /* Kartalar siqilib qolmasligi uchun padding */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth; /* JavaScript orqali silliq skroll uchun */
+    scroll-snap-type: x mandatory; /* Skrollni kartalarga to'g'rilash effekti */
+    /* Toza ko'rinish uchun skroll chizig'ini yashirish */
+    scrollbar-width: none; /* Firefox uchun */
+    -ms-overflow-style: none;  /* IE va Edge uchun */
+}
+
+.hospital-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera uchun */
+}
+
+/* Karuseldagi har bir karta */
+.hospital-card-wrapper {
+    flex: 0 0 18rem; /* Karta o'lchamini qat'iy belgilash */
+    scroll-snap-align: start; /* Har bir kartaning boshiga to'g'rilash */
+    scroll-snap-stop: always; /* Har doim to'g'rilanishini ta'minlash */
+}
+
+.hospital-card {
+    background-color: var(--color-card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px var(--color-shadow-light);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hospital-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 8px 25px var(--color-shadow-medium);
+}
+
+.hospital-card img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.hospital-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.hospital-card-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    margin: 0 0 0.5rem 0;
+    min-height: 2.5rem;
+}
+
+.hospital-card-content p {
+    font-size: 0.875rem;
+    color: var(--color-medium-text);
+    margin: 0 0 1rem 0;
+}
+
+.hospital-card-content .view-details {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start; /* Tugmani chapga to'g'rilash */
+    font-size: 0.875rem;
+    color: var(--color-primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.hospital-card-content .view-details:hover {
+    color: #0056b3;
+}
+
+.hospital-card-content .view-details svg {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+}

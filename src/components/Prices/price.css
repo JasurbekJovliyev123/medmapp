@@ -1,0 +1,145 @@
+.lowest-quotes-section {
+    padding: 4rem 1rem;
+    background-color: var(--color-card-bg);
+    text-align: center;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: 2.5rem auto;
+    text-align: left;
+}
+
+.quote-card {
+    background-color: #f0f5fa; /* Rasmga o'xshash och ko'k-kulrang */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--color-shadow-light);
+}
+
+.quote-icon-wrapper {
+    flex-shrink: 0;
+    background-color: #e0eaf3;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-icon-wrapper svg {
+    width: 2rem;
+    height: 2rem;
+    color: #3b82f6; /* Ko'k rang */
+}
+
+.quote-text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-text-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-dark-text);
+    margin: 0 0 0.25rem 0;
+}
+
+.quote-text-content p {
+    font-size: 0.875rem;
+    color: var(--color-medium-text);
+    margin: 0 0 0.5rem 0;
+}
+
+.quote-text-content a {
+    font-size: 0.875rem;
+    color: var(--color-primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto; /* Havolani pastga surish */
+}
+
+.quote-text-content a:hover {
+    text-decoration: underline;
+}
+
+.quotes-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.quote-button-get, .quote-button-chat {
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quote-button-get:hover, .quote-button-chat:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.quote-button-get {
+    background-color: #dc3545; /* Qizil */
+    color: white;
+}
+
+.quote-button-chat {
+    background-color: #28a745; /* Yashil */
+    color: white;
+}
+
+
+    /* .quote-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 0.75rem;
+    } */
+
+    /* .quote-icon-wrapper {
+        margin: 0 auto 1rem auto; 
+    }
+
+    .quote-text-content {
+        align-items: center;
+    }
+
+    .quote-text-content h3 {
+        font-size: 0.9rem; /* Matnni ixchamlashtirish */
+    } */
+
+/* Kichik ekranlar uchun moslashuv */
+@media (max-width: 640px) {
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+    .quote-card {
+        padding: 1rem;
+    }
+    .quote-icon-wrapper {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    .quote-icon-wrapper svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}

@@ -1,0 +1,170 @@
+:root {
+    --color-primary-blue: #007BFF;
+    --color-primary-green: #20c997; /* Tibbiyotga mosroq yashil */
+    --color-light-blue: #e0f2fe; /* blue-100 */
+    --color-light-green: #e6f7f2; /* Yengil yashil */
+    --color-dark-text: #212529; /* Juda to'q kulrang */
+    --color-medium-text: #495057; /* O'rta kulrang */
+    --color-light-bg: #f8f9fa; /* Oq-kulrang */
+    --color-card-bg: #ffffff;
+    --color-border: #dee2e6;
+    --color-shadow-light: rgba(0, 0, 0, 0.05);
+    --color-shadow-medium: rgba(0, 0, 0, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.15);
+
+    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
+}
+
+.most-popular-destinations-section {
+    padding: 4rem 1rem;
+    background-color: var(--color-card-bg);
+}
+
+.section-header-with-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 72rem;
+    margin: 0 auto 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.section-header-with-nav .section-title {
+    margin-bottom: 0;
+    text-align: left; /* Sarlavhani chapga surish */
+}
+
+.section-header-with-nav .nav-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.section-header-with-nav .nav-button {
+    background-color: var(--color-light-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.section-header-with-nav .nav-button:hover {
+    background-color: var(--color-primary-blue);
+    border-color: var(--color-primary-blue);
+}
+
+.section-header-with-nav .nav-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--color-medium-text);
+    transition: color 0.2s ease;
+}
+
+.section-header-with-nav .nav-button:hover svg {
+    color: #ffffff;
+}
+
+.destination-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.destination-card-full {
+    background-color: var(--color-card-bg);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px var(--color-shadow-light);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card-full:hover {
+    transform: translateY(-0.75rem);
+    box-shadow: 0 10px 30px var(--color-shadow-medium);
+}
+
+.destination-card-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.destination-card-header img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+
+.destination-card-header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    margin: 0;
+}
+
+.destination-card-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.destination-card-image-item {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.destination-card-image-item img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.destination-card-image-item:hover img {
+    transform: scale(1.05);
+}
+
+.destination-card-image-item span {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.destination-card-footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border);
+}
+
+.destination-card-footer .price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary-green);
+}
+
+.destination-card-footer .explore-button {
+    padding: 0.625rem 1rem;
+    font-size: 0.9375rem;
+    margin-top: 0;
+}
