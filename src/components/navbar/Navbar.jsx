@@ -1,6 +1,16 @@
 import './navbar.css'
 import logo from '../../assets/images/MedMapp_Logo_shaffof.png'
 import { useEffect, useRef, useState } from 'react';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 const Navbar = () => {
     const headerRef = useRef(null);
 
@@ -22,6 +32,7 @@ const Navbar = () => {
   
   return (
     <header ref={headerRef} className={`header`}>
+    <Sheet className="z-10000">
       <div className="header-logo">
         <a href="#"><img src={logo} alt="MedMapp Logosi" /></a>
       </div>
@@ -76,7 +87,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      <button className="hamburger-menu" aria-label="Menyuni ochish">
+      
+       
+      <SheetTrigger asChild>
+         <button className="hamburger-menu" aria-label="Menyuni ochish">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
           viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
           strokeLinecap="round" strokeLinejoin="round">
@@ -84,7 +98,34 @@ const Navbar = () => {
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="18" x2="21" y2="18" />
         </svg>
-      </button>
+      </button> 
+      </SheetTrigger>
+      <SheetContent className="px-8 py-12">
+        <SheetHeader>
+           <ul className='flex flex-col gap-y-5'>
+              <SheetClose className='text-start'>
+                  <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#category">Bo‘limlar</a></li>
+              </SheetClose>
+              <SheetClose className='text-start'>
+                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#packages">Tur-paketlar</a></li>
+              </SheetClose>
+              <SheetClose className='text-start'>
+                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#prices">Narxlar</a></li>
+              </SheetClose>
+              <SheetClose className='text-start'>
+                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#services">Xizmatlarimiz</a></li>
+              </SheetClose>
+              <SheetClose className='text-start'>
+                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#doctors">Shifokorlar</a></li>
+              </SheetClose>
+              <SheetClose className='text-start'>
+                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="##clinics">Klinikalar</a></li>
+              </SheetClose>
+        </ul>
+          
+        </SheetHeader>
+      </SheetContent>
+    </Sheet>
     </header>
   );
 };

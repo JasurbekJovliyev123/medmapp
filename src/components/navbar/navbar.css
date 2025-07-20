@@ -13,7 +13,7 @@
     --color-shadow-medium: rgba(0, 0, 0, 0.1);
     --color-shadow-strong: rgba(0, 0, 0, 0.15);
 
-    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height: 6rem; /* Boshlang'ich balandlik */
     --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
 }
 
@@ -26,7 +26,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);   
@@ -38,6 +38,9 @@
     justify-content: space-between;
     
     transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.z-10000{
+    z-index: 10000;
 }
 
 /* Scroll qilinganda header o'zgarishi */

@@ -33,7 +33,7 @@
 .specialty-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
     max-width: 72rem; /* 1152px */
     margin: 0 auto;
 }
@@ -41,7 +41,7 @@
 .specialty-card {
     background-color: var(--color-card-bg);
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 4px 20px var(--color-shadow-light);
     display: flex;
     align-items: center;
