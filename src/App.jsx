@@ -1,4 +1,4 @@
-import './app.css'
+import './App.css'
 import Navbar from './components/navbar/Navbar'
 import HeroSection from './components/hero/Hero'
 import MultiSpecialtySection from './components/Multiplay/Multiplay'
