@@ -1,3 +1,4 @@
+
 .lowest-quotes-section {
     padding: 4rem 1rem;
     background-color: var(--color-card-bg);
@@ -68,7 +69,7 @@
     color: var(--color-primary-blue);
     font-weight: 600;
     text-decoration: none;
-    margin-top: auto; /* Havolani pastga surish */
+    margin-top: auto; 
 }
 
 .quote-text-content a:hover {
@@ -108,23 +109,7 @@
 }
 
 
-    /* .quote-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem 0.75rem;
-    } */
-
-    /* .quote-icon-wrapper {
-        margin: 0 auto 1rem auto; 
-    }
-
-    .quote-text-content {
-        align-items: center;
-    }
-
-    .quote-text-content h3 {
-        font-size: 0.9rem; /* Matnni ixchamlashtirish */
-    } */
+   
 
 /* Kichik ekranlar uchun moslashuv */
 @media (max-width: 640px) {

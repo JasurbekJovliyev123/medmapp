@@ -1,36 +1,25 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { useRef } from 'react';
+import './hospital.css';
 import hospital1 from '../../assets/images/hospital1.png'
 import hospital2 from '../../assets/images/hospital2.png'
 import hospital from '../../assets/images/hospital.jpg'
-import './hospital.css'
-const hospitals = [ 
-  { id: 1, name: "Apollo Hospital", image:hospital1 },
-  { id: 2, name: "Medeor Hospital", image: hospital2 },
-  { id: 3, name: "Max Healthcare", image: hospital },
-  { id: 4, name: "Fortis Hospital", image: hospital1 },
-  { id: 5, name: "Manipal Hospital", image: hospital2 },
+const hospitals = [
+  { id: 1, name: "Fortis Hospital, Noida", city: "Delhi / NCR", image: hospital1 },
+  { id: 2, name: "Fortis Escorts Heart Institute", city: "New Delhi", image: hospital2 },
+  { id: 3, name: "Fortis Vasant Kunj", city: "New Delhi", image: hospital },
+  { id: 4, name: "Fortis Memorial Research Institute", city: "Gurgaon", image: hospital1},
+  { id: 5, name: "Apollo Hospitals", city: "Chennai", image: hospital2 },
 ];
 
 const HospitalCarousel = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // nechta ko‘rsatilsin
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 768, // mobilda
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  const carouselRef = useRef(null);
+
+  const scrollLeft = () => {
+    carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+  };
+
+  const scrollRight = () => {
+    carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
   };
 
   return (
@@ -41,41 +30,41 @@ const HospitalCarousel = () => {
       </div>
 
       <div className="hospital-carousel-container">
-        <Slider {...settings}>
+        <button className="nav-button" id="prevHospital" onClick={scrollLeft}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M15 19l-7-7 7-7" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        <div className="hospital-carousel" ref={carouselRef}>
           {hospitals.map((h) => (
-            <div key={h.id} className="hospital-card">
-              <img src={h.image} alt={h.name} style={{ borderRadius: "10px", width: "100%", height: "200px", objectFit: "cover" }} />
-              <h3 style={{ marginTop: "1rem" }}>{h.name}</h3>
+            <div key={h.id} className="hospital-card-wrapper">
+              <div className="hospital-card">
+                <img src={h.image} alt={h.name} />
+                <div className="hospital-card-content">
+                  <h3>{h.name}</h3>
+                  <p>{h.city}</p>
+                  <a href="#" className="view-details">
+                    Batafsil ko‘rish
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M5 12h14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="m12 5 7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
-        </Slider>
+        </div>
+
+        <button className="nav-button" id="nextHospital" onClick={scrollRight}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M9 5l7 7-7 7" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
       </div>
     </section>
   );
 };
-
-// O'ngga o‘tish tugmasi
-function NextArrow(props) {
-  const { onClick } = props;
-  return (
-    <div id="nextHospital" className="nav-button" onClick={onClick}>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M9 5l7 7-7 7" />
-      </svg>
-    </div>
-  );
-}
-
-// Chapga o‘tish tugmasi
-function PrevArrow(props) {
-  const { onClick } = props;
-  return (
-    <div id="prevHospital" className="nav-button" onClick={onClick}>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <path d="M15 19l-7-7 7-7" />
-      </svg>
-    </div>
-  );
-}
 
 export default HospitalCarousel;

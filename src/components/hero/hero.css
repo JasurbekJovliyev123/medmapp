@@ -21,10 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
+    min-height: 100vh;
     background-color: #000; /* Video yuklanmaganda qora fon */
     color: #ffffff;
-    padding-top: 6rem;
+    padding-top: 12rem;
     padding-bottom: 4rem;
     overflow: hidden;
 }
@@ -62,7 +62,7 @@
 }
 
 .hero-content h1 {
-    font-size: 72px;
+    font-size: 64px;
     line-height: 1.2;
     margin-bottom: 1rem;
     font-weight: 800;
@@ -84,6 +84,8 @@
 
 .main-search-bar .search-input-wrapper {
     position: relative;
+    background-color: white;
+    border-radius: 9999px;
 }
 
 .main-search-bar input {
@@ -92,15 +94,25 @@
     border-radius: 9999px;
     color: var(--color-dark-text);
     font-size: 1.125rem;
-    box-shadow: 0 4px 15px var(--color-shadow-medium);
+    /* box-shadow: 0 4px 15px var(--color-shadow-medium); */
     border: none;
     outline: none;
     transition: all 0.3s ease-in-out;
 }
 
-.main-search-bar input:focus {
-    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3); /* Ko'k fokus halqasi */
+/* .main-search-bar input:focus {
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3);
+} */
+@media (max-width:700px) {
+    .main-search-bar input:focus {
+    box-shadow: 0;
+} 
+    .main-search-bar input{
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
 }
+
 
 .main-search-bar .search-icon-inside {
     position: absolute;
@@ -115,7 +127,7 @@
 /* Forma kartasi uslublari */
 .form-card {
     width: 100%;
-    max-width: 64rem;
+    max-width: 96rem;
     background-color: var(--color-card-bg);
     padding: 2rem;
     border-radius: 1.5rem;
@@ -125,15 +137,18 @@
     gap: 1.5rem;
     align-items: flex-end;
 }
-@media (min-width: 640px) { /* sm breakpoint */
+@media (min-width: 640px) { 
     .specialty-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1024px) { /* lg breakpoint */
+@media (min-width: 1024px) {
     .specialty-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .form-card{
+        width: 1200px;
     }
 }
 .form-group {
@@ -213,12 +228,13 @@
     color: #ffffff;
     font-weight: 700;
     padding: 0.75rem 1.5rem;
+    font-size: 14px;
     border-radius: 0.5rem;
     box-shadow: 0 4px 10px rgba(32, 201, 151, 0.3); /* Yashil soya */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 5px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     border: none;
@@ -364,7 +380,7 @@
 @media (max-width: 767px) {
     .hero-section {
         /* Kontentni yuqoriroqqa surish va vertikal bo'shliqni kamaytirish */
-        padding-top: 5rem; /* Header balandligini hisobga olgan holda */
+        padding-top: 7rem; /* Header balandligini hisobga olgan holda */
         padding-bottom: 3rem;
         min-height: 90vh; /* Ekran balandligiga moslashish */
         display: flex;

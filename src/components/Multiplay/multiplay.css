@@ -189,3 +189,149 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }   
+
+@media (max-width: 767px) { /* Faqat planshetgacha bo'lgan ekranlar uchun */
+
+    /* --- "Ko'p tarmoqli tibbiy yordam" bo'limi --- */
+    
+    .specialty-grid {
+        grid-template-columns: repeat(2, 1fr); /* [YANGI] Gridni 2 qatorli qilish */
+        gap: 1rem; /* Oradagi masofani kichraytirish */
+    }
+
+    .specialty-card {
+        flex-direction: column; /* [YANGI] Elementlarni vertikal joylashtirish */
+        justify-content: flex-start;
+        text-align: center;
+        gap: 0.75rem; /* Elementlar orasidagi masofa */
+        padding: 1.25rem 0.5rem; /* Kartaning ichki qismi */
+    }
+
+    .specialty-card .icon-wrapper {
+        background-color: transparent; /* [YANGI] Ikona orqa fonini olib tashlash */
+        margin: 0;
+        width: auto;
+        height: auto;
+        color: var(--color-primary-blue);
+    }
+    
+    .specialty-card .icon-wrapper svg {
+        width: 2.75rem; /* Ikonani o'lchamini kattalashtirish */
+        height: 2.75rem;
+    }
+    
+    .specialty-card .text-content {
+        width: 100%;
+    }
+
+    /* Sarlavhani (h3) rasmga o'xshash tugmaga aylantirish */
+    .specialty-card .text-content h3 {
+        background-color: var(--color-light-blue); /* Tugma foni */
+        color: var(--color-primary-blue);        /* Tugma matni rangi */
+        border-radius: 9999px;                   /* "Pill" shakli uchun */
+        border: 1px solid var(--color-light-blue);
+        padding: 0.5rem 2.5rem 0.5rem 1rem;       /* "+" belgisi uchun o'ngdan joy */
+        font-size: 0.8rem;                       /* Shrift o'lchami */
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* "+" belgisini qo'shish */
+    .specialty-card .text-content h3::after {
+        content: '+';
+        position: absolute;
+        right: 0.4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--color-primary-blue);
+        color: #ffffff;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+    
+    /* Tavsifni (p) mobil versiyada yashirish */
+    .specialty-card .text-content p {
+        display: none;
+    }
+
+    /* --- "Nima uchun bizni tanlaysiz?" bo'limi --- */
+    .why-choose-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .why-choose-us-card {
+        padding: 1.5rem 1rem;
+    }
+    .why-choose-us-card h3 {
+        font-size: 1.1rem;
+    }
+    .why-choose-us-card p {
+        font-size: 0.85rem;
+    }
+
+    /* ==================================================== */
+    /* === YANGI QO'SHILGAN KOD (NARXLAR VA XIZMATLAR) === */
+    /* ==================================================== */
+
+    /* --- "Kafolatlangan eng arzon narxlar" bo'limi --- */
+    .quotes-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 qatorli qilish */
+        gap: 1rem;
+    }
+
+    .quote-card {
+        flex-direction: column; /* Ikonka va matnni vertikal qilish */
+        text-align: center;
+        padding: 1.5rem 0.75rem;
+    }
+
+    .quote-icon-wrapper {
+        margin: 0 auto 1rem auto; /* Ikonkani markazga keltirish */
+    }
+
+    .quote-text-content {
+        align-items: center;
+    }
+
+    .quote-text-content h3 {
+        font-size: 0.9rem; /* Matnni ixchamlashtirish */
+    }
+
+
+    /* --- "Bizning xizmatlarimiz" bo'limi --- */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 qatorli qilish */
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .service-icon {
+        margin: 0 auto 1.25rem auto; /* Ikonkani markazga keltirish */
+    }
+    
+    .service-card h4 {
+        font-size: 1rem; /* Matnni ixchamlashtirish */
+    }
+
+    .service-card p {
+        font-size: 0.8rem;
+    }
+}

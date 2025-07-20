@@ -1,6 +1,19 @@
-import React from 'react';
+
+// import { DialogFooter, DialogHeader } from '@chakra-ui/react';
 import heroVideo from '../../assets/images/Intro.mp4'
 import './hero.css'
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+  DialogPortal,
+  DialogOverlay
+} from "@/components/ui/dialog"
+// import { DialogHeader } from './ui/dialog';
 const HeroSection = () => {
   return (
     <section className="hero-section">
@@ -41,7 +54,8 @@ const HeroSection = () => {
         </div>
 
         {/* Forma kartasi */}
-        <div className="form-card">
+        <Dialog className='w-full'>
+           <div className="form-card">
           <div className="form-group">
             <label htmlFor="resident-of">Qayerda istiqomat qilasiz?</label>
             <div className="select-wrapper">
@@ -133,7 +147,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <button id="chat-button" className="chat-button">
+          <DialogTrigger asChild>
+             <button id="chat-button" className="chat-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -153,7 +168,29 @@ const HeroSection = () => {
             </svg>
             <span>Bepul konsultatsiya olish</span>
           </button>
+          </DialogTrigger>
+
+          <DialogPortal>
+             <DialogOverlay className="fixed inset-0 bg-white/10 z-40" />
+             <DialogContent className='bg-white'>
+        <DialogHeader>
+          <DialogDescription>
+                        Chat funksiyasi
+            Chat funksionalligi simulyatsiya qilingan. Haqiqiy ilovada bu chatni ochadi.
+          </DialogDescription>
+        </DialogHeader>
+
+
+        <DialogFooter>
+          <DialogClose asChild>
+            <button>Yopish</button>
+          </DialogClose>
+          {/* <Button>Saqlash</Button> */}
+        </DialogFooter>
+      </DialogContent>
+          </DialogPortal>
         </div>
+        </Dialog>
       </div>
     </section>
   );
