@@ -172,7 +172,7 @@
 .destination-carousel {
   display: flex;
   overflow-x: auto;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1rem;
   scroll-behavior: smooth;
   padding-bottom: 1rem;

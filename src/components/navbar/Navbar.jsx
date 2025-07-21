@@ -44,7 +44,7 @@ const Navbar = () => {
           <li><a href="#prices">Narxlar</a></li>
           <li><a href="#services">Xizmatlarimiz</a></li>
           <li><a href="#doctors">Shifokorlar</a></li>
-          <li><a href="##clinics">Klinikalar</a></li>
+          <li><a href="#clinics">Klinikalar</a></li>
         </ul>
       </nav>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
                  <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#doctors">Shifokorlar</a></li>
               </SheetClose>
               <SheetClose className='text-start'>
-                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="##clinics">Klinikalar</a></li>
+                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#clinics">Klinikalar</a></li>
               </SheetClose>
         </ul>
           

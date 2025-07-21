@@ -118,16 +118,17 @@ const HowWeWork = () => {
               }
             />
           </div>
-           <DialogContent className='bg-white'>
+           <DialogContent className='bg-white md:w-[70%] h-[400px]'>
               <DialogOverlay className="fixed inset-0 bg-white/10 z-40"></DialogOverlay>
-               <div className="lightbox" id="video-lightbox">
-                    <div className="lightbox-content">
-                        <button className="lightbox-close" aria-label="Yopish">&times;</button>
-                        <div className="lightbox-video-wrapper">
+               <div className="lightbox w-full" id="video-lightbox">
+                    <div className="lightbox-content w-full h-full">
+                        <div className="lightbox-video-wrapper h-full">
                             <iframe
+                            className="md:w-full w-[96%] mx-auto h-[90%] mt-5  md:h-full"
                               src="https://www.youtube.com/embed/GpGugHf003c?si=5eePs2tuPxidzKzE"
                               title="YouTube video player"
                               frameBorder="0"
+                              
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
                             ></iframe>

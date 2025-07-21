@@ -52,8 +52,8 @@ const Footer = () => {
         <ul className="footer-links">
           <li><a href="#">Bosh sahifa</a></li>
           <li><a href="#">Biz haqimizda</a></li>
-          <li><a href="#">Shifokorlar</a></li>
-          <li><a href="#">Kasalxonalar</a></li>
+          <li><a href="#doctors">Shifokorlar</a></li>
+          <li><a href="#hospital">Kasalxonalar</a></li>
           <li><a href="#">Bloglar</a></li>
           <li><a href="#">Hamkor bo'ling</a></li>
         </ul>
