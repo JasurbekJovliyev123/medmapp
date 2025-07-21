@@ -168,3 +168,37 @@
     font-size: 0.9375rem;
     margin-top: 0;
 }
+
+.destination-carousel {
+  display: flex;
+  overflow-x: auto;
+  justify-content: center;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+  margin:  0 auto;
+}
+
+.destination-carousel::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.destination-card-full {
+  max-width: 400px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 0.5rem;
+}
+
+@media (max-width:500px) {
+   .destination-card-full{
+     max-width: 340px;
+}  
+} 
+
+.destination-cards-grid{
+    justify-content: center;
+}

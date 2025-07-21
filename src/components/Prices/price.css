@@ -4,7 +4,11 @@
     background-color: var(--color-card-bg);
     text-align: center;
 }
-
+@media (max-width:600px) {
+    .lowest-quotes-section{
+        padding: 1rem 1rem;
+    }
+}
 .quotes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -114,10 +118,11 @@
 /* Kichik ekranlar uchun moslashuv */
 @media (max-width: 640px) {
     .quotes-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
     }
     .quote-card {
-        padding: 1rem;
+        padding: 0.8rem;
     }
     .quote-icon-wrapper {
         width: 3.5rem;

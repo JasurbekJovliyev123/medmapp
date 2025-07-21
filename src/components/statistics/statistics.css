@@ -65,6 +65,8 @@
     z-index: 2;
 }
 
+
+
 .stat-card {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -109,5 +111,20 @@
 @media (min-width: 768px) {
     .stats-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width:600px) {
+    .stats-grid{
+        gap: 1.5rem;
+    }
+    .stat-card{
+        padding: 0.8rem;
+    }
+    .stat-icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .stat-number{
+        font-size: 2rem;
     }
 }
