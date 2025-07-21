@@ -1,8 +1,6 @@
 import './doctors.css'
-import doctor1 from '../../assets/images/doctor1.png'
-import doctor2 from '../../assets/images/doctor2.jpg'
-import doctor3 from '../../assets/images/doctor4.jpg'
 
+import { doctors } from '../../constans'
 const PopularDoctorsSection = () => {
   return (
     <section className="popular-doctors-section">
@@ -85,118 +83,6 @@ const LockIcon = () => (
 
 /** Ma'lumotlar massivi **/
 
-const doctors = [
-  {
-    name: "Dr. Pradeep Chowbey",
-    image: doctor1,
-    specialty: "Rais - Laparoskopik, Endoskopik, Bariatrik jarrohlik instituti",
-    rating: 4.0,
-    ratingFull: 4,
-    details: [
-      {
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24"
-            viewBox="0 0 24 24"
-            fill="none" stroke="currentColor"
-            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            className="lucide lucide-message-circle"
-          >
-            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-          </svg>
-        ),
-        text: "Maslahatlar: Max Healthcare Saket"
-      },
-      {
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24"
-            viewBox="0 0 24 24"
-            fill="none" stroke="currentColor"
-            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            className="lucide lucide-briefcase"
-          >
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-          </svg>
-        ),
-        text: "Tajriba: 45+ yil"
-      },
-      {
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24"
-            viewBox="0 0 24 24"
-            fill="none" stroke="currentColor"
-            strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            className="lucide lucide-scalpel"
-          >
-            <path d="M12 2L2 12l10 10 10-10L12 2z" />
-            <path d="M18 6l-6 6" />
-            <path d="M6 18l6-6" />
-          </svg>
-        ),
-        text: "Jarrohlik amaliyotlari: 85000+"
-      }
-    ]
-  },
-  {
-    name: "Prof. S. Natarajan",
-    image: doctor2,
-    specialty: "Vitreoretinal jarroh, Bosh klinik xizmatlar",
-    rating: 5.0,
-    ratingFull: 5,
-    details: [
-      {
-        icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-        ),
-        text: "Maslahatlar: Dr Agarwal Eye Hospital, Wadala, Mumbai"
-      },
-      {
-        icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        ),
-        text: "Tajriba: 36 yil"
-      },
-      {
-        icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-scalpel"><path d="M12 2L2 12l10 10 10-10L12 2z"/><path d="M18 6l-6 6"/><path d="M6 18l6-6"/></svg>
-        ),
-        text: "Jarrohlik amaliyotlari: 80000+"
-      }
-    ]
-  },
-  {
-    name: "Dr. Suraj Munjal",
-    image:doctor3,
-    specialty: "Tibbiy direktor - Oftalmologiya",
-    rating: 5.0,
-    ratingFull: 5,
-    details: [
-      {
-        icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-        ),
-        text: "Maslahatlar: The Sight Avenue, New Delhi"
-      },
-      {
-        icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        ),
-        text: "Tajriba: 17 yil"
-      },
-      {
-        icon: (
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-scalpel"><path d="M12 2L2 12l10 10 10-10L12 2z"/><path d="M18 6l-6 6"/><path d="M6 18l6-6"/></svg>
-        ),
-        text: "Jarrohlik amaliyotlari: 5000+"
-      }
-    ]
-  }
-];
+
 
 export default PopularDoctorsSection;

@@ -1,9 +1,20 @@
 import React from "react";
 import doctorImage from "../../assets/images/doctor.jpg"; 
 import './work.css'
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+  DialogPortal,
+  DialogOverlay
+} from "@/components/ui/dialog"
 const HowWeWork = () => {
   return (
-    <div>
+    <Dialog>
         <section className="how-we-work-section">
       <div className="container">
         <h2 className="section-title">Biz qanday ishlaymiz?</h2>
@@ -107,14 +118,32 @@ const HowWeWork = () => {
               }
             />
           </div>
+           <DialogContent className='bg-white'>
+              <DialogOverlay className="fixed inset-0 bg-white/10 z-40"></DialogOverlay>
+               <div className="lightbox" id="video-lightbox">
+                    <div className="lightbox-content">
+                        <button className="lightbox-close" aria-label="Yopish">&times;</button>
+                        <div className="lightbox-video-wrapper">
+                            <iframe
+                              src="https://www.youtube.com/embed/GpGugHf003c?si=5eePs2tuPxidzKzE"
+                              title="YouTube video player"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
 
-          {/* O'ng taraf: Video Prevyu */}
+                        </div>
+                    </div>
+                </div>
+           </DialogContent>
           <div className="work-video-container" data-youtube-id="GpGugHf003c">
-            <img
+            <DialogTrigger>
+                <img
               src={doctorImage}
               alt="Tibbiy turizm haqida video"
-              className="video-thumbnail"
+              className="video-thumbnail cursor-pointer"
             />
+            </DialogTrigger>
             <button className="play-button" aria-label="Videoni ijro etish">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +166,7 @@ const HowWeWork = () => {
     </section>
 
     
-    </div>
+    </Dialog>
   );
 };
 

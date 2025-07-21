@@ -1,0 +1,260 @@
+:root {
+    --color-primary-blue: #007BFF;
+    --color-primary-green: #20c997; /* Tibbiyotga mosroq yashil */
+    --color-light-blue: #e0f2fe; /* blue-100 */
+    --color-light-green: #e6f7f2; /* Yengil yashil */
+    --color-dark-text: #212529; /* Juda to'q kulrang */
+    --color-medium-text: #495057; /* O'rta kulrang */
+    --color-light-bg: #f8f9fa; /* Oq-kulrang */
+    --color-card-bg: #ffffff;
+    --color-border: #dee2e6;
+    --color-shadow-light: rgba(0, 0, 0, 0.05);
+    --color-shadow-medium: rgba(0, 0, 0, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.15);
+
+    --header-height: 4rem; /* Boshlang'ich balandlik */
+    --header-height-scrolled: 3rem; /* Scroll qilingandagi balandlik */
+}
+.try-now-section-v2 {
+    background-color: #f7faff; /* Yengil va zamonaviy fon */
+    padding: 5rem 1rem;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.try-now-content-v2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Chap ustun uslublari */
+.try-now-left-col .section-title-left {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--color-dark-text);
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.try-now-left-col .section-subtitle-left {
+    font-size: 1.125rem;
+    color: var(--color-medium-text);
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.doctor-image-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.doctor-image-wrapper img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 91, 234, 0.15);
+    position: relative;
+    z-index: 5;
+}
+
+.decorative-shape {
+    position: absolute;
+    background-color: var(--color-primary-blue);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.decorative-shape.shape-1 {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    left: -50px;
+}
+
+.decorative-shape.shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -70px;
+    right: -60px;
+    background-color: var(--color-primary-green);
+}
+
+/* O'ng ustun uslublari */
+.try-now-options-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.option-card-v2 {
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option-card-v2:hover, .option-card-v2.active {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 91, 234, 0.1);
+    border-color: var(--color-primary-blue);
+}
+
+.option-card-v2.active {
+     background: linear-gradient(135deg, var(--color-light-blue), #ffffff);
+}
+
+.option-card-v2 h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-dark-text);
+    margin: 0 0 0.25rem 0;
+}
+
+.option-card-v2 p {
+    font-size: 0.95rem;
+    color: var(--color-medium-text);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.option-icon-v2 {
+    background-color: var(--color-light-blue);
+    color: var(--color-primary-blue);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-icon-v2 svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.option-arrow {
+    align-self: flex-end;
+    background-color: #e9ecef;
+    color: var(--color-medium-text);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.option-card-v2:hover .option-arrow, .option-card-v2.active .option-arrow {
+    background-color: var(--color-primary-blue);
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.chat-button-v2 {
+    background-color: var(--color-primary-green);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.chat-button-v2:hover {
+    background-color: #1aa67b;
+    box-shadow: 0 4px 10px rgba(32, 201, 151, 0.3);
+}
+
+.phone-input-group-v2 {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.phone-input-group-v2 input {
+    flex-grow: 1;
+    border: 1px solid var(--color-border);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.phone-input-group-v2 input:focus {
+    border-color: var(--color-primary-blue);
+}
+
+.notify-button-v2 {
+    background-color: var(--color-primary-blue);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.notify-button-v2:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .try-now-content-v2 {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+    }
+    .option-card-v2 {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .option-arrow {
+        margin-left: auto;
+        align-self: center;
+    }
+    .option-card-v2.active {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .option-card-v2.active .chat-button-v2 {
+        align-self: flex-start;
+    }
+}
+@media (max-width:600px) {
+  .try-now-left-col .section-title-left {
+    font-size: 1.5rem;
+  }
+  .try-now-section-v2{
+    padding: 4rem 0.3rem;
+  }
+  .section-subtitle-left{
+    max-width: 90%;
+    
+  }
+  .option-card-v2{
+    max-width: 350px;
+  }
+  .phone-input-group-v2{
+    flex-direction: column;
+  }
+}

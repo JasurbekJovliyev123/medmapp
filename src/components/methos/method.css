@@ -20,13 +20,21 @@
     padding: 4rem 1rem;
     background-color: var(--color-light-bg);
 }
-
+@media (max-width:600px) {
+   .find-treatment-section {
+    padding: 1rem 1rem;} 
+}
 .treatment-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     max-width: 72rem;
     margin: 0 auto;
+}
+@media (max-width:900px) {
+    .treatment-grid{
+      grid-template-columns: repeat(2, 1fr);  
+    }
 }
 
 .treatment-card {
@@ -128,4 +136,26 @@
 .explore-button svg {
     width: 1rem;
     height: 1rem;
+}
+@media (max-width:600px) {
+    .treatment-grid{
+      grid-template-columns: repeat(1, 1fr);  
+    }
+    .treatment-card img{
+        height: 8rem;
+    }
+    .treatment-card-content {
+    padding: 1rem;
+     }
+        .treatment-price {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--color-primary-green);
+            margin-top: 0.75rem;
+        }
+        .explore-button {
+            padding: 0.5rem 1rem;
+            gap: 5px;
+        }
+        
 }

@@ -167,14 +167,7 @@
     margin-bottom: 2.5rem;
 }
 
-@media (max-width: 640px) {
-      .section-title{
-        font-size: 1.5rem;
-      }
-      .section-subtitle{
-        font-size: 1rem;
-      }
-}
+
 /* ======================================== */
 /* Responsive qoidalarga qo'shimcha */
 /* ======================================== */
@@ -334,4 +327,16 @@
     .service-card p {
         font-size: 0.8rem;
     }
+}
+
+@media (max-width: 640px) {
+      .section-title{
+        font-size: 1.5rem;
+      }
+      .section-subtitle{
+        font-size: 1rem;
+      }
+      .specialty-card{
+        padding: 0.5rem 0.5rem;
+      }
 }

@@ -112,7 +112,34 @@
 .timeline-item:hover .card-icon {
     transform: scale(1.1) rotate(-5deg);
 }
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px; /* Ikonkani vizual markazlash */
+    color: var(--color-primary-blue);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
+.work-video-container:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #ffffff;
+}
+
+.play-button svg {
+    width: 2rem;
+    height: 2rem;
+}
 .card-text h3 {
     font-size: 1.25rem;
     font-weight: 700;

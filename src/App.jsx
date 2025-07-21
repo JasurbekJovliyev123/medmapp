@@ -11,6 +11,7 @@ import TreatmentSection from './components/methos/Method'
 import OurServicesSection from './components/services/Services'
 import PopularDoctorsSection from './components/doctors/Doctors'
 import HospitalCarousel from './components/hospital/Hospital'
+import Test from './components/test/Test'
 const App = () => {
   return (
     <div>
@@ -42,7 +43,7 @@ const App = () => {
           <section id="clinics">
             <HospitalCarousel/>
           </section>
-            
+            <Test/>
            
            
             

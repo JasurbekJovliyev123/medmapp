@@ -125,7 +125,25 @@
     background-color: #0056b3;
     transform: translateY(-3px);
 }
+@media (max-width:600px) {
+    .doctor-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .doctor-card{
+        padding: 1rem;
+    }
+    .doctor-card img{
+        width: 8rem;
 
+        height: 8rem;
+    }
+    .doctor-card h3{
+        font-size: 1rem;
+    }
+    .request-appointment-button{
+        padding: 0.5rem 1rem;
+    }
+}
 .data-protection {
     font-size: 0.75rem;
     color: var(--color-medium-text);
