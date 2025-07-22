@@ -25,7 +25,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);   
     border-bottom: 1px solid rgba(229, 231, 235, 0.5);  
-    padding: 15px 1.5rem;
+    padding: 5px 1.5rem;
     /* height: var(--header-height);  */
     display: flex;
     align-items: center;
@@ -201,6 +201,12 @@
     .header-actions {
         display: flex;
     }
+}
+@media (max-width:600px) {
+    .header-logo img {
+    height: 3.5rem; 
+    transition: height 0.3s ease-in-out;
+}
 }
 
 
