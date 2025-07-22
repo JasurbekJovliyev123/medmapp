@@ -23,9 +23,8 @@ const HowWeWork = () => {
         </p>
 
         <div className="how-we-work-content">
-          {/* Chap taraf: Timeline */}
           <div className="timeline">
-            {/* 1-qadam */}
+        
             <TimelineItem
               number="1"
               title="Biz bilan bog'laning"
@@ -47,7 +46,7 @@ const HowWeWork = () => {
                 </svg>
               }
             />
-            {/* 2-qadam */}
+       
             <TimelineItem
               number="2"
               title="Tibbiy xulosa oling"
@@ -70,7 +69,7 @@ const HowWeWork = () => {
                 </svg>
               }
             />
-            {/* 3-qadam */}
+          
             <TimelineItem
               number="3"
               title="Chiptalarni bron qiling"
@@ -95,7 +94,7 @@ const HowWeWork = () => {
                 </svg>
               }
             />
-            {/* 4-qadam */}
+           
             <TimelineItem
               number="4"
               title="Davolaning va uchib keting"
@@ -159,7 +158,7 @@ const HowWeWork = () => {
           </div>
         </div>
 
-        {/* Tugma */}
+       
         <div style={{ textAlign: "center", marginTop: "3rem" }}>
           <button className="get-started-button">Ro'yxatdan o'tish</button>
         </div>

@@ -13,13 +13,11 @@ import {
   DialogPortal,
   DialogOverlay
 } from "@/components/ui/dialog"
-// import { DialogHeader } from './ui/dialog';
 const HeroSection = () => {
   return (
     <section className="hero-section">
       <video autoPlay muted loop className="hero-video">
         <source src={heroVideo} type="video/mp4" />
-        {/* Sizning brauzeringiz videoni qo'llab-quvvatlamaydi. */}
       </video>
       <div className="hero-overlay"></div>
 

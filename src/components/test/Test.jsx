@@ -18,11 +18,8 @@ const Test = () => {
           <div className="decorative-shape shape-2"></div>
         </div>
       </div>
-
-      {/* O'ng ustun: Variantlar */}
       <div className="try-now-right-col">
         <div className="try-now-options-v2">
-          {/* 1-variant: Onlayn maslahat */}
           <div className="option-card-v2">
             <div className="option-icon-v2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -48,7 +45,6 @@ const Test = () => {
             </a>
           </div>
 
-          {/* 2-variant: Ikkinchi fikr */}
           <div className="option-card-v2 active">
             <div className="option-icon-v2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -70,8 +66,6 @@ const Test = () => {
               </button>
             </div>
           </div>
-
-          {/* 3-variant: Sog'lomlashtirish */}
           <div className="option-card-v2">
             <div className="option-icon-v2">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"

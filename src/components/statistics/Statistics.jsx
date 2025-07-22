@@ -31,7 +31,7 @@ const Statistics = () => {
               updateCount();
             });
 
-            observer.unobserve(section); // Bir martalik ish
+            observer.unobserve(section); 
           }
         });
       },
