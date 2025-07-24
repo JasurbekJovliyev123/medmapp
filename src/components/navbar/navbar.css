@@ -91,7 +91,9 @@
 .header-nav a:hover {
     color: var(--color-primary-blue);
 }
-
+.active{
+    color: var(--color-primary-blue);
+}
 .header-actions {
     display: none; /* Mobilda yashirin */
     align-items: center;

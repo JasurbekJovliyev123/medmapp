@@ -1,0 +1,137 @@
+:root {
+  --page-bg: #f8f9fa;
+  --page-border: #dee2e6;
+  --page-text-dark: #212529;
+  --page-text-light: #6c757d;
+  --page-primary: #007BFF;
+  --page-secondary-blue: #0d324d;
+}
+
+/* Animatsiyalar */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HERO bo‘lim */
+.page-hero-creative {
+  margin-top: 4rem;
+  padding: 5rem 1rem 8rem 1rem;
+  background: linear-gradient(135deg, #17a2b8 0%, #0d4d44 100%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero-creative .wave-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3e%3cpath fill='%23ffffff' fill-opacity='1' d='M0,160L48,170.7C96,181,192,203,288,208C384,213,480,203,576,176C672,149,768,107,864,112C960,117,1056,171,1152,181.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3e%3c/path%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-hero-creative .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-creative h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.page-hero-creative p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 1rem auto 0 auto;
+  opacity: 0.9;
+  animation: fadeInUp 0.5s ease-out 0.2s;
+  animation-fill-mode: backwards;
+}
+
+/* Davolash usullari bo‘limi */
+.treatments-main-section {
+  padding: 2rem 1rem 4rem 1rem;
+  background-color: #fff;
+}
+
+.treatments-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: -5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Karta dizayni */
+.treatment-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  border: 1px solid var(--page-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.treatment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.treatment-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.treatment-card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.treatment-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.treatment-card p {
+  color: var(--page-text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.treatment-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--page-border);
+}
+
+.details-link {
+  font-weight: 600;
+  color: var(--page-primary);
+  text-decoration: none;
+}

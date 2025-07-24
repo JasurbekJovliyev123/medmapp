@@ -1,6 +1,7 @@
 import './navbar.css'
 import logo from '../../assets/images/MedMapp_Logo_shaffof.png'
 import { useEffect, useRef, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   Sheet,
   SheetClose,
@@ -34,17 +35,19 @@ const Navbar = () => {
     <header ref={headerRef} className={`header`}>
     <Sheet className="z-10000">
       <div className="header-logo">
-        <a href="#"><img src={logo} alt="MedMapp Logosi" /></a>
+        <NavLink to={'/'}><img src={logo} alt="MedMapp Logosi" /></NavLink>
       </div>
 
       <nav className="header-nav">
         <ul>
-          <li><a href="#category">Bo‘limlar</a></li>
-          <li><a href="#packages">Tur-paketlar</a></li>
-          <li><a href="#prices">Narxlar</a></li>
-          <li><a href="#services">Xizmatlarimiz</a></li>
-          <li><a href="#doctors">Shifokorlar</a></li>
-          <li><a href="#clinics">Klinikalar</a></li>
+          <li><NavLink to={'/'}>Bosh sahifa</NavLink></li>
+          <li><NavLink to={'/departments'}>Bo‘limlar</NavLink></li>
+          <li><NavLink to={'/clinics'}>Shifoxonalar</NavLink></li>
+          <li><NavLink to={'/pricing'}>Narxlar</NavLink></li>
+          <li><NavLink to={'/treatments'}>Davolash usuli</NavLink></li>
+          <li><NavLink to={'/services'}>Xizmatlarimiz</NavLink></li>
+          <li><NavLink to={'/doctors'}>Shifokorlar</NavLink></li>
+          <li><NavLink to={'/testimonials'}>Bemorlarimiz</NavLink></li>
         </ul>
       </nav>
 
@@ -103,23 +106,29 @@ const Navbar = () => {
       <SheetContent className="px-8 py-12">
         <SheetHeader>
            <ul className='flex flex-col gap-y-5'>
-              <SheetClose className='text-start'>
-                  <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#category">Bo‘limlar</a></li>
+              <SheetClose asChild className='text-start'>
+                  <NavLink to={'/'} className='hover:text-blue-600 transition-colors font-medium text-lg'>Bosh sahifa</NavLink>
               </SheetClose>
-              <SheetClose className='text-start'>
-                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#packages">Tur-paketlar</a></li>
+              <SheetClose asChild className='text-start'>
+                 <NavLink  className='hover:text-blue-600 transition-colors font-medium text-lg' to={'/departments'}>Bo‘limlar</NavLink>
               </SheetClose>
-              <SheetClose className='text-start'>
-                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#prices">Narxlar</a></li>
+              <SheetClose asChild className='text-start'>
+                 <NavLink  className='hover:text-blue-600 transition-colors font-medium text-lg' to={'/clinics'}>Shifoxonalar</NavLink>
               </SheetClose>
-              <SheetClose className='text-start'>
-                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#services">Xizmatlarimiz</a></li>
+              <SheetClose asChild className='text-start'>
+               <NavLink  className='hover:text-blue-600 transition-colors font-medium text-lg' to={'/pricing'}>Narxlar</NavLink>
               </SheetClose>
-              <SheetClose className='text-start'>
-                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#doctors">Shifokorlar</a></li>
+              <SheetClose asChild className='text-start'>
+                      <NavLink  className='hover:text-blue-600 transition-colors font-medium text-lg' to={'/treatments'}>Davolash usuli</NavLink>
               </SheetClose>
-              <SheetClose className='text-start'>
-                 <li className='hover:text-blue-600 transition-colors font-medium text-lg'><a href="#clinics">Klinikalar</a></li>
+              <SheetClose asChild className='text-start'>
+                <NavLink className='hover:text-blue-600 transition-colors font-medium text-lg' to={'/services'}>Xizmatlarimiz</NavLink>
+              </SheetClose>
+              <SheetClose asChild className='text-start'>
+                <NavLink className='hover:text-blue-600 transition-colors font-medium text-lg' to={'/doctors'}>Shifokorlar</NavLink>
+              </SheetClose>
+              <SheetClose asChild className='text-start'>
+                <NavLink className='hover:text-blue-600 transition-colors font-medium text-lg' to={'/testimonials'}>Bemorlarimiz</NavLink>
               </SheetClose>
         </ul>
           

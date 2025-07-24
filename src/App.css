@@ -12,3 +12,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #000; /* Video yuklanmaganda qora fon */
+    color: #ffffff;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}

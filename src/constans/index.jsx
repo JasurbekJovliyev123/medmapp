@@ -346,4 +346,17 @@ export const LockIcon = () => (
     <path d="M7 11V7a5 5 0 0 1 10 0v4" />
   </svg>
 );
+import amrita from '../assets/images/1.jpg'
+export const allData = [
+    { id: 1, procedure: 'Angioplastika (1 stent)', price: 3500, department: 'kardiologiya', clinic: 'amrita', clinicName: 'Amrita Hospital', clinicImage: amrita },
+    { id: 2, procedure: 'Koronar shuntlash (CABG)', price: 4800, department: 'kardiologiya', clinic: 'amrita', clinicName: 'Amrita Hospital', clinicImage: amrita },
+    { id: 3, procedure: 'Angioplastika (1 stent)', price: 3800, department: 'kardiologiya', clinic: 'fortis', clinicName: 'Fortis Escorts', clinicImage: 'https://placehold.co/600x400/ffc107/333333?text=Fortis+Escorts' },
+    { id: 4, procedure: 'Koronar shuntlash (CABG)', price: 5200, department: 'kardiologiya', clinic: 'fortis', clinicName: 'Fortis Escorts', clinicImage: 'https://placehold.co/600x400/ffc107/333333?text=Fortis+Escorts' },
+    { id: 5, procedure: 'Yurak klapanini almashtirish', price: 7500, department: 'kardiologiya', clinic: 'apollo', clinicName: 'Apollo Hospitals', clinicImage: 'https://placehold.co/600x400/6f42c1/FFFFFF?text=Apollo+Hospitals' },
+    { id: 6, procedure: "Tizza bo'g'imini almashtirish", price: 4500, department: 'ortopediya', clinic: 'amrita', clinicName: 'Amrita Hospital', clinicImage: 'images/Amrita/Ward.jpg' },
+    { id: 7, procedure: "Chanoq-son bo'g'imini almashtirish", price: 5500, department: 'ortopediya', clinic: 'fortis', clinicName: 'Fortis Escorts', clinicImage: 'https://placehold.co/600x400/ffc107/333333?text=Fortis+Escorts' },
+    { id: 8, procedure: "Tizza bo'g'imini almashtirish", price: 4900, department: 'ortopediya', clinic: 'apollo', clinicName: 'Apollo Hospitals', clinicImage: 'https://placehold.co/600x400/6f42c1/FFFFFF?text=Apollo+Hospitals' },
+    { id: 9, procedure: 'Kimyoterapiya (1 sikl)', price: 800, department: 'onkologiya', clinic: 'amrita', clinicName: 'Amrita Hospital', clinicImage: 'images/Amrita/MRT.jpg' },
+    { id: 10, procedure: 'Nur terapiyasi (IMRT)', price: 6000, department: 'onkologiya', clinic: 'apollo', clinicName: 'Apollo Hospitals', clinicImage: 'https://placehold.co/600x400/6f42c1/FFFFFF?text=Apollo+Hospitals' },
+  ];
 
